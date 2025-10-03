@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"vercel_deployment_service/aws"
+	"vercel_deployment_service/utils"
 
 	"github.com/joho/godotenv"
 	"github.com/redis/go-redis/v9"
@@ -25,5 +26,7 @@ func main() {
 		}
 		fmt.Println(res)
 		aws.DownloadS3Object(context.Background(), "vercel-arch", res[1], "./output")
+		utils.BuildProject(res[1])
+		aws.CopyFinalDist(res[1])
 	}
 }
