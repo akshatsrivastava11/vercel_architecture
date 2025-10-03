@@ -36,7 +36,9 @@ func getAll(w http.ResponseWriter, r *http.Request) {
 }
 func main() {
 	err := godotenv.Load()
-
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
 	mux := http.NewServeMux()
 	mux.HandleFunc("/*", getAll)
 	c := cors.New(cors.Options{

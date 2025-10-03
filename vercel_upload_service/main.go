@@ -99,6 +99,7 @@ func main() {
 	fmt.Printf("Vercel Deploy Service Started")
 	mux := http.NewServeMux()
 	mux.HandleFunc("/send", sendURL)
+	mux.HandleFunc("/status", status)
 	c := cors.New(cors.Options{
 		AllowedOrigins:   []string{"*"},
 		AllowedMethods:   []string{"GET", "POST", "OPTIONS"},
