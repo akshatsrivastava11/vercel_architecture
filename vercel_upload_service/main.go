@@ -27,12 +27,6 @@ var publisher = redis.NewClient(&redis.Options{
 	DB:       0,                // use default DB
 })
 
-var subscriber = redis.NewClient(&redis.Options{
-	Addr:     "localhost:6379", // Redis server address
-	Password: "",               // no password set
-	DB:       0,                // use default DB
-})
-
 func sendURL(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("URL SEND")
 	if r.Method != http.MethodPost {
