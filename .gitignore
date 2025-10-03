@@ -1,0 +1,45 @@
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore compiled binaries (common Go)
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.out
+
+# Ignore Go build cache
+/bin/
+*.test
+*.prof
+
+# Ignore Go module vendor directories
+vendor/
+
+# Ignore temporary files
+*.tmp
+*.log
+*.swp
+*.swo
+
+# Ignore IDE/editor configs
+.vscode/
+.idea/
+*.iml
+
+# Ignore module-specific compiled files
+**/bin/
+**/*.exe
+**/*.out
+
+# Ignore coverage files
+coverage.out
+
+# Ignore node_modules if any JS tooling exists in modules
+**/node_modules/
+
+
+**/output
+**/go.sum
