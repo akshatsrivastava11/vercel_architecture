@@ -28,5 +28,6 @@ func main() {
 		aws.DownloadS3Object(context.Background(), "vercel-arch", res[1], "./output")
 		utils.BuildProject(res[1])
 		aws.CopyFinalDist(res[1])
+		subscriber.HSet(ctx, "status", res[1], "uploaded")
 	}
 }
