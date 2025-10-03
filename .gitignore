@@ -39,7 +39,7 @@ coverage.out
 
 # Ignore node_modules if any JS tooling exists in modules
 **/node_modules/
-
+**/.env
 
 **/output
 **/go.sum
