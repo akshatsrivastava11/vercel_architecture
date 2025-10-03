@@ -108,5 +108,5 @@ func main() {
 	})
 	handler := c.Handler(mux)
 
-	log.Fatal(http.ListenAndServe(":8080", handler))
+	log.Fatal(http.ListenAndServe(":3000", handler))
 }
